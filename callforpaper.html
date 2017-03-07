@@ -176,7 +176,7 @@
      <table class="MsoTableGrid" style="max-width: 70%; border-collapse: collapse; border-spacing: 0px; padding: 0px; margin: 10px 0px; color: #000000; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; border: none; background-color: #fffff" border="1" cellspacing="0" cellpadding="0">
 
 <tbody>
-<tr><center><span style="font-family: cambria; font-size: 13pt;"><font color="#FF4000">Call for Paper - Volume 2 Issue 2 , <span class="yearClass"></span><!--<img src="http://www.ijretjournal.org/images/new.gif" align="#" style="margin:0px">--></font></span></center>
+<tr><center><span style="font-family: cambria; font-size: 13pt;"><font color="#FF4000">Call for Paper - Volume 2 Issue 3 , <span class="yearClass"></span><!--<img src="http://www.ijretjournal.org/images/new.gif" align="#" style="margin:0px">--></font></span></center>
 
 
 <tr>
@@ -388,7 +388,7 @@ were used latex then send it PDF format.</li><br>
 
 <div class="sidebarboxmulti" align="center">
               <h2>Update news</h2><br>
-	<font face="" font size="2"font color="brown"><strong>Call For Paper :</font><font face="" font size="2"font color="blue"> Jan - Feb</strong></font><br><br><font face="" font size="2"font color="brown"><strong>Frequency :</font><font face="" font size="2"font color="blue"> 6 issues per year</font></strong><br><br><font face="" font size="2"font color="brown"><strong>Subject :</font><font face="" font size="2"font color="blue"> Computer Science Engineering & Techniques</strong></font><br><br></div>
+	<font face="" font size="2"font color="brown"><strong>Call For Paper :</font><font face="" font size="2"font color="blue"> <span class="month"></span></strong></font><br><br><font face="" font size="2"font color="brown"><strong>Frequency :</font><font face="" font size="2"font color="blue"> 6 issues per year</font></strong><br><br><font face="" font size="2"font color="brown"><strong>Subject :</font><font face="" font size="2"font color="blue"> Computer Science Engineering & Techniques</strong></font><br><br></div>
 
 <!--<div class="sidebarboxmulti" align="center">
               <h2>Official FB Page</h2><br>
@@ -481,7 +481,11 @@ function myFunction() {
     	//alert(lastDay.getDate() + " th " + month[d.getMonth()]+" "+year)
      }
 
-
+    var year=d.getFullYear();
+    var monthClass=document.getElementsByClassName("month");
+    for(var i = 0, length = monthClass.length; i < length; i++) {
+      monthClass[i].innerHTML =  month[d.getMonth()];
+     }
 
 
     /* document.getElementsByClassName("monthDemo").innerHTML = "Call for paper "+ month[d.getMonth()]+" "+year; */

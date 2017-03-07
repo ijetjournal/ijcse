@@ -185,7 +185,7 @@
 
 			<div class="sidebarboxmulti" align="center">
 			              <h2>Update news</h2><br>
-	<font face="" font size="2"font color="brown"><strong>Call For Paper :</font><font face="" font size="2"font color="blue"> Jan - Feb</strong></font><br><br><font face="" font size="2"font color="brown"><strong>Frequency :</font><font face="" font size="2"font color="blue"> 6 issues per year</font></strong><br><br><font face="" font size="2"font color="brown"><strong>Subject :</font><font face="" font size="2"font color="blue"> Computer Science Engineering & Techniques</strong></font><br><br></div>
+	<font face="" font size="2"font color="brown"><strong>Call For Paper :</font><font face="" font size="2"font color="blue"> <span class="month"></span></strong></font><br><br><font face="" font size="2"font color="brown"><strong>Frequency :</font><font face="" font size="2"font color="blue"> 6 issues per year</font></strong><br><br><font face="" font size="2"font color="brown"><strong>Subject :</font><font face="" font size="2"font color="blue"> Computer Science Engineering & Techniques</strong></font><br><br></div>
 
 <div class="sidebarboxmulti" align="">
               <h2><center>Our Journals</center></h2>
@@ -278,6 +278,12 @@ function myFunction() {
       monthClass[i].innerHTML = "Call for paper "+ month[d.getMonth()]+" "+year;
      }
 
+    var year=d.getFullYear();
+    var monthClass=document.getElementsByClassName("month");
+    for(var i = 0, length = monthClass.length; i < length; i++) {
+      monthClass[i].innerHTML =  month[d.getMonth()];
+     }
+    
     var dateClass=document.getElementsByClassName("dateDemo");
     for(var j = 0, length1 = dateClass.length; j < length1; j++) {
     	dateClass[j].innerHTML = lastDay.getDate() + " - " + month[d.getMonth()]+" "+year;
